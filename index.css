@@ -1,0 +1,130 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.carrousel{
+    display: flex;
+    flex-wrap: nowrap;
+    overflow: scroll;
+}
+
+.card{
+    min-width: 200px;
+    margin-left: 20px; 
+}
+.overflow-ellipsis{
+    width: 100px;
+    text-overflow: ellipsis;
+}
+
+.display-none{
+    display: none;
+}
+
+.offcanvas-body{
+    display: flex;
+    flex-direction: column;
+}
+
+.card-modal{
+    width: 100%;
+    border-radius: 20px;
+    display: flex;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+}
+.card-modal img{
+    width: 100px;
+}
+.card-info{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-size: 1.3rem;
+}
+p{
+    margin: 0;
+}
+
+.products a{
+    text-decoration: none;
+    color: black;
+}
+
+/***** ESTILOS CARRITO0 *****/
+.offcanvas-body{
+    padding: 0;
+}
+.product-cart{
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #ccc;
+    width: 100%;
+}
+.product-cart-info{
+    display: flex;
+    flex-direction: column;
+}
+.product-cart-info-nombre{
+    width: 150px;
+}
+.product-cart-info-contador{
+    display: flex;
+}
+.product-cart-info-contador p{
+    margin-right: 30px;
+    margin-top: 10px;
+    font-weight: bold;
+}
+.total-product{
+    display: flex;
+}
+.total-product p{
+    margin-right: 20px;
+}
+
+.totalesCompra{
+    display: flex;
+    width: 100%;
+    padding: 20px 20px;
+    justify-content: space-between;
+}
+
+.accordion-body{
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+}
+
+.button{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+.button button{
+    width: 90%;
+    padding: 10px 0;
+    margin-bottom: 20px;
+}
+
+/* ESTILOS CARRITO VACIO */
+
+.carroVacio{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.carroVacio h1{
+    margin-top: 50px;
+    margin-bottom: 20px;
+    font-size: 20px;
+}
+.carroVacio a{
+    text-decoration: underline;
+    color: black;
+}
