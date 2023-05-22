@@ -1,3 +1,4 @@
 # Tienda-de-bebidas
-Creado utilizando localStorage
-carrito añadido
+- Creado utilizando localStorage
+- Carrito añadido 
+
