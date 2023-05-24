@@ -22,40 +22,42 @@ productContainer.innerHTML =
             <h1 onclick="volver()">←</h1>
         </div>
         <img src="${producto[0].imagenSrc}" alt="" id="productImage">
-        <div class="info">
-            <p class="nombre" id="productName">
-            ${producto[0].nombre}
-            </p>
-            
-            <p class="nombre" id="productName">
-            ${producto[0].ml}
-            </p>
+        <div class="info-container">
+            <div class="info">
+                <p class="nombre" id="productName">
+                ${producto[0].nombre}
+                </p>
+                
+                <p class="nombre" id="productName">
+                ${producto[0].ml}
+                </p>
 
-            <p class="precio" id="productPrecio">
-            $${producto[0].precio}
-            </p>
-            <p>🚛 Envio gratis</p>
-        </div>
-        <div class="contadorCantidad">
-            <div class="contadorCantidad-inner">
-                <h1 onclick="restarUno()">-</h1>
-                <h1 id="cantidad">1</h1>
-                <h1 onclick="sumarUno()">+</h1>
+                <p class="precio" id="productPrecio">
+                $${producto[0].precio}
+                </p>
+                <p>🚛 Envio gratis</p>
             </div>
-        </div>
-        <div class="botonesAumentarCantidad">
-            <div class="botonAumentar" onclick="sumarTres()">
-                <h1>+3</h1>
+            <div class="contadorCantidad">
+                <div class="contadorCantidad-inner">
+                    <h1 onclick="restarUno()">-</h1>
+                    <h1 id="cantidad">1</h1>
+                    <h1 onclick="sumarUno()">+</h1>
+                </div>
             </div>
-            <div class="botonAumentar" onclick="sumarSeis()">
-                <h1>+6</h1>
+            <div class="botonesAumentarCantidad">
+                <div class="botonAumentar" onclick="sumarTres()">
+                    <h1>+3</h1>
+                </div>
+                <div class="botonAumentar" onclick="sumarSeis()">
+                    <h1>+6</h1>
+                </div>
+                <div class="botonAumentar" onclick="sumarDoce()">
+                    <h1>+12</h1>
+                </div>
             </div>
-            <div class="botonAumentar" onclick="sumarDoce()">
-                <h1>+12</h1>
+            <div class="c-button">
+            <button class="btn btn-primary" onclick="agregarACarrito()">AGREGAR</button>
             </div>
-        </div>
-        <div class="c-button">
-        <button class="btn btn-primary" onclick="agregarACarrito()">AGREGAR</button>
         </div>
 `;
 

@@ -3,18 +3,34 @@ const bebidas = [
     {id:2, nombre: "Novecento Raices Malbec", categoria: "vino", ml:"750ml", precio: 1900, imagenSrc: "Vinos/vino2.webp"},
     {id:3, nombre: "Cabernet Saugvinon", categoria: "vino", ml:"750ml", precio: 1100, imagenSrc: "Vinos/vino3.webp"},
     {id:4, nombre: "Santa Julia", categoria: "vino", ml:"750ml", precio: 1500, imagenSrc: "Vinos/vino4.webp"},
+    {id:17, nombre: "Novecento Cabernet", categoria: "vino", ml:"750ml", precio: 1300, imagenSrc: "Vinos/vino1.webp"},
+    {id:18, nombre: "Novecento Raices Malbec", categoria: "vino", ml:"750ml", precio: 1900, imagenSrc: "Vinos/vino2.webp"},
+    {id:19, nombre: "Cabernet Saugvinon", categoria: "vino", ml:"750ml", precio: 1100, imagenSrc: "Vinos/vino3.webp"},
+    {id:20, nombre: "Santa Julia", categoria: "vino", ml:"750ml", precio: 1500, imagenSrc: "Vinos/vino4.webp"},
     {id:5, nombre: "Andes Rubia",categoria: "cerveza", ml:"750ml", precio: 1300, imagenSrc:"Cerveza/beer1.webp"},
     {id:6, nombre: "Andes Roja",categoria: "cerveza", ml:"750ml", precio: 1900, imagenSrc:"Cerveza/beer2.webp"},
     {id:7, nombre: "Pack:6 Andes Negra",categoria: "cerveza", ml:"750ml", precio: 1100, imagenSrc:"Cerveza/beer3.webp"},
     {id:8, nombre: "Pack:6 Andes IPA Roja",categoria: "cerveza", ml:"750ml", precio: 1500, imagenSrc:"Cerveza/beer4.webp"},
+    {id:21, nombre: "Andes Rubia",categoria: "cerveza", ml:"750ml", precio: 1300, imagenSrc:"Cerveza/beer1.webp"},
+    {id:22, nombre: "Andes Roja",categoria: "cerveza", ml:"750ml", precio: 1900, imagenSrc:"Cerveza/beer2.webp"},
+    {id:23, nombre: "Pack:6 Andes Negra",categoria: "cerveza", ml:"750ml", precio: 1100, imagenSrc:"Cerveza/beer3.webp"},
+    {id:24, nombre: "Pack:6 Andes IPA Roja",categoria: "cerveza", ml:"750ml", precio: 1500, imagenSrc:"Cerveza/beer4.webp"},
     {id:9, nombre: "Fernet Branca", categoria: "destilado", ml:"750ml", precio: 1300, imagenSrc:"Destilados/destilado1.webp"},
     {id:10, nombre: "Fernet 1882", categoria: "destilado", ml:"750ml", precio: 1900, imagenSrc:"Destilados/destilado2.webp"},
     {id:11, nombre: "Fernet Buho Negro", categoria: "destilado", ml:"750ml", precio: 1100, imagenSrc:"Destilados/destilado3.webp"},
     {id:12, nombre: "Fernet Branca", categoria: "destilado", ml:"750ml", precio: 1500, imagenSrc:"Destilados/destilado4.webp"},
+    {id:25, nombre: "Fernet Branca", categoria: "destilado", ml:"750ml", precio: 1300, imagenSrc:"Destilados/destilado1.webp"},
+    {id:26, nombre: "Fernet 1882", categoria: "destilado", ml:"750ml", precio: 1900, imagenSrc:"Destilados/destilado2.webp"},
+    {id:27, nombre: "Fernet Buho Negro", categoria: "destilado", ml:"750ml", precio: 1100, imagenSrc:"Destilados/destilado3.webp"},
+    {id:28, nombre: "Fernet Branca", categoria: "destilado", ml:"750ml", precio: 1500, imagenSrc:"Destilados/destilado4.webp"},
     {id:13, nombre: "Citric Naranja", categoria: "sinalcohol", ml:"750ml", precio: 1300, imagenSrc:"Sin Alcohol/sinalcohol1.webp"},
     {id:14, nombre: "Jugo Baggio", categoria: "sinalcohol", ml:"750ml", precio: 1900, imagenSrc:"Sin Alcohol/sinalcohol2.webp"},
     {id:15, nombre: "Citric Pomelo", categoria: "sinalcohol", ml:"750ml", precio: 1100, imagenSrc:"Sin Alcohol/sinalcohol3.webp"},
-    {id:16, nombre: "Jugo Del Valle", categoria: "sinalcohol", ml:"750ml", precio: 1500, imagenSrc:"Sin Alcohol/sinalcohol4.webp"}
+    {id:16, nombre: "Jugo Del Valle", categoria: "sinalcohol", ml:"750ml", precio: 1500, imagenSrc:"Sin Alcohol/sinalcohol4.webp"},
+    {id:30, nombre: "Citric Naranja", categoria: "sinalcohol", ml:"750ml", precio: 1300, imagenSrc:"Sin Alcohol/sinalcohol1.webp"},
+    {id:31, nombre: "Jugo Baggio", categoria: "sinalcohol", ml:"750ml", precio: 1900, imagenSrc:"Sin Alcohol/sinalcohol2.webp"},
+    {id:32, nombre: "Citric Pomelo", categoria: "sinalcohol", ml:"750ml", precio: 1100, imagenSrc:"Sin Alcohol/sinalcohol3.webp"},
+    {id:33, nombre: "Jugo Del Valle", categoria: "sinalcohol", ml:"750ml", precio: 1500, imagenSrc:"Sin Alcohol/sinalcohol4.webp"}
     ]
 
 localStorage.setItem('bebidas', JSON.stringify(bebidas));
@@ -30,16 +46,14 @@ function mostrarCervezas(){
     listaBebidas.forEach((element) =>{
         if(element.categoria == "cerveza"){
             carrouselCervezas.innerHTML += 
-            `<div class="card">
-                <img src="${element.imagenSrc}" class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h6 class="card-title text-truncate">${element.nombre}</h6>
-                    <p class="card-text">${element.ml}<br><strong>$${element.precio}</strong></p>
-                    <button 
-                    class="btn btn-primary"
-                    data-id="${element.id}" 
-                    onclick="mostrarProducto(event)">AGREGAR</button>
-                </div>
+            `<div class="card-bebida">
+                <p class="info">¡Llega en unos minutos!</p>
+                <img src="${element.imagenSrc}" alt="">
+                <p class="nombre">${element.nombre + " " + element.ml}</p>
+                <strong>
+                <p class="precio">$${element.precio}</p>
+                </strong>
+                <p class="boton" data-id="${element.id} "onclick="mostrarProducto(event)">VER</p>
             </div>`
         }
     })
@@ -51,17 +65,15 @@ function mostrarSinalcohol(){
     listaBebidas.forEach(element =>{
         if(element.categoria == "sinalcohol"){
             carrouselSinalcohol.innerHTML += 
-            `<div class="card">
-                <img src="${element.imagenSrc}" class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h6 class="card-title text-truncate">${element.nombre}</h6>
-                    <p class="card-text">${element.ml}<br><strong>$${element.precio}</strong></p>
-                    <button 
-                    class="btn btn-primary"
-                    data-id="${element.id}" 
-                    onclick="mostrarProducto(event)">AGREGAR</button>
-                </div>
-            </div>`
+            `<div class="card-bebida">
+            <p class="info">¡Llega en unos minutos!</p>
+            <img src="${element.imagenSrc}" alt="">
+            <p class="nombre">${element.nombre + " " + element.ml}</p>
+            <strong>
+            <p class="precio">$${element.precio}</p>
+            </strong>
+            <p class="boton" data-id="${element.id} "onclick="mostrarProducto(event)">VER</p>
+        </div>`
         }
     })
 }
@@ -72,17 +84,15 @@ function mostrarDestilados(){
     listaBebidas.forEach(element =>{
         if(element.categoria == "destilado"){
             carrouselDestilados.innerHTML += 
-            `<div class="card">
-                <img src="${element.imagenSrc}" class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h6 class="card-title text-truncate">${element.nombre}</h6>
-                    <p class="card-text">${element.ml}<br><strong>$${element.precio}</strong></p>
-                    <button 
-                    class="btn btn-primary"
-                    data-id="${element.id}" 
-                    onclick="mostrarProducto(event)">AGREGAR</button>
-                </div>
-            </div>`
+            `<div class="card-bebida">
+            <p class="info">¡Llega en unos minutos!</p>
+            <img src="${element.imagenSrc}" alt="">
+            <p class="nombre">${element.nombre + " " + element.ml}</p>
+            <strong>
+            <p class="precio">$${element.precio}</p>
+            </strong>
+            <p class="boton" data-id="${element.id} "onclick="mostrarProducto(event)">VER</p>
+        </div>`
         }
     })
 }
@@ -93,17 +103,15 @@ function mostrarVinos(){
     listaBebidas.forEach(element =>{
         if(element.categoria == "vino"){
             carrouselVinos.innerHTML += 
-            `<div class="card">
-                <img src="${element.imagenSrc}" class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h6 class="card-title text-truncate">${element.nombre}</h6>
-                    <p class="card-text">${element.ml}<br><strong>$${element.precio}</strong></p>
-                    <button 
-                    class="btn btn-primary"
-                    data-id="${element.id}" 
-                    onclick="mostrarProducto(event)">AGREGAR</button>
-                </div>
-            </div>`
+            `<div class="card-bebida">
+            <p class="info yellow">¡Llega en unos dias!</p>
+            <img src="${element.imagenSrc}" alt="">
+            <p class="nombre">${element.nombre + " " + element.ml}</p>
+            <strong>
+            <p class="precio">$${element.precio}</p>
+            </strong>
+            <p class="boton" data-id="${element.id} "onclick="mostrarProducto(event)">VER</p>
+        </div>`
         }
     })
 }

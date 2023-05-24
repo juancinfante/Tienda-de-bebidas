@@ -3,6 +3,10 @@
     padding: 0;
     box-sizing: border-box;
 }
+.containers{
+    width: 900px;
+    margin: 0 auto;
+}
 
 .carrousel{
     display: flex;
@@ -127,4 +131,42 @@ p{
 .carroVacio a{
     text-decoration: underline;
     color: black;
+}
+
+/* CARGA DE BEBIDAS */
+
+.card-bebida{
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    min-width: 200px;
+    margin-right: 10px;
+}
+.card-bebida .info{
+    width: 100%;
+    background-color: #84C1FF;
+    text-align: center;
+}
+
+.card-bebida .nombre{
+    padding: 0 10px;
+}
+.card-bebida .boton{
+    color: black;
+    background-color: tomato;
+    padding: 5px 35px;
+    border-radius: 10px;
+    margin-bottom: 5px;
+    border: 1px solid rgb(131, 131, 131);
+}
+.boton:hover{
+    cursor: pointer;
+}
+
+.yellow{
+    background-color: yellow !important;
 }
